@@ -10,7 +10,7 @@ Route::model('user', 'App\User');
 Route::pattern('id', '[0-9]+');
 Route::pattern('slug', '[0-9a-z-_]+');
 
-/***************    Site routes  **********************************/
+/***************    Rutas del sitio  **********************************/
 Route::get('/', 'HomeController@index');
 Route::get('home', 'Admin\DashboardController@index');
 Route::get('about', 'PagesController@about');
@@ -25,10 +25,10 @@ Route::controllers([
     'password' => 'Auth\PasswordController',
 ]);
 
-/***************    Admin routes  **********************************/
+/***************    Rutas Visibles para Admin  **********************************/
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
 
-    # Admin Dashboard
+    # Admin Escritorio
     Route::get('dashboard', 'Admin\DashboardController@index');
 
     # Language
@@ -38,7 +38,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('language/{language}/delete', 'Admin\LanguageController@delete');
     Route::resource('language', 'Admin\LanguageController');
 
-    # Article category
+    # Categorias
     Route::get('articlecategory/data', 'Admin\ArticleCategoriesController@data');
     Route::get('articlecategory/{articlecategory}/show', 'Admin\ArticleCategoriesController@show');
     Route::get('articlecategory/{articlecategory}/edit', 'Admin\ArticleCategoriesController@edit');
@@ -46,7 +46,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('articlecategory/reorder', 'ArticleCategoriesController@getReorder');
     Route::resource('articlecategory', 'Admin\ArticleCategoriesController');
 
-    # Articles
+    # Seccion Articulos
     Route::get('article/data', 'Admin\ArticleController@data');
     Route::get('article/{article}/show', 'Admin\ArticleController@show');
     Route::get('article/{article}/edit', 'Admin\ArticleController@edit');
@@ -68,11 +68,32 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('photo/{photo}/delete', 'Admin\PhotoController@delete');
     Route::resource('photo', 'Admin\PhotoController');
 
-    # Users
+    # Seccion Usuarios
     Route::get('user/data', 'Admin\UserController@data');
     Route::get('user/{user}/show', 'Admin\UserController@show');
     Route::get('user/{user}/edit', 'Admin\UserController@edit');
     Route::get('user/{user}/delete', 'Admin\UserController@delete');
     Route::resource('user', 'Admin\UserController');
 });
+
+
+
+
+/***************    Rutas Ocultas para Usuario  **********************************/
+Route::group(['prefix' => 'admin', 'middleware' => 'usuario'], function() {
+
+
+     # Seccion Users
+    Route::get('user/data', 'Admin\UserController@data');
+    Route::get('user/{user}/show', 'Admin\UserController@show');
+    Route::get('user/{user}/edit', 'Admin\UserController@edit');
+    Route::get('user/{user}/delete', 'Admin\UserController@delete');
+    Route::resource('user', 'Admin\UserController');
+
+
+
+
+   
+});
+
 
