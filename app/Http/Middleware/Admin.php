@@ -52,8 +52,8 @@ class Admin implements Middleware {
             {
                 $admin=1;
             }
-            if($admin==0){
-                return $this->response->redirectTo('/');
+            if($this->auth->user()->admin==0){
+                $admin=0;
             }
             return $next($request);
         }

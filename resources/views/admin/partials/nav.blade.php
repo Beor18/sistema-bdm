@@ -11,7 +11,9 @@
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
-                <!--<li>
+                @if(Auth::check())
+                    @if(Auth::user()->admin==1)
+                                    <!--<li>
                     <a href="{{ url('') }}"><i class="fa fa-backward"></i> Volver</a>
                 </li>-->
                 <li>
@@ -19,11 +21,33 @@
                         <i class="fa fa-dashboard fa-fw"></i> Escritorio
                     </a>
                 </li>
+                    @endif
+                @endif
+
+                <!-- Permiso para ver menu usuario-->
+
+                @if(Auth::check())
+                    @if(Auth::user()->admin==0)
+                                    <!--<li>
+                    <a href="{{ url('') }}"><i class="fa fa-backward"></i> Volver</a>
+                </li>-->
+                <li>
+                    <a href="{{url('admin/dashboard')}}">
+                        <i class="fa fa-dashboard fa-fw"></i> Escritorio
+                    </a>
+                </li>
+                    @endif
+                @endif
+
+                <!-- FIN Permiso para ver menu usuario-->
+
                 <!-- <li>
                     <a href="{{url('admin/language')}}">
                         <i class="fa fa-language"></i> Idioma
                     </a>
                 </li>-->
+                @if(Auth::check())
+                    @if(Auth::user()->admin==1)
                 <li>
                     <a href="#">
                         <i class="glyphicon glyphicon-bullhorn"></i> Articulos
@@ -42,6 +66,34 @@
                         </li>
                     </ul>
                 </li>
+                    @endif
+                @endif
+
+            <!-- Permiso para ver menu usuario-->
+                @if(Auth::check())
+                    @if(Auth::user()->admin==0)
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-bullhorn"></i> Articulos
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav collapse">
+                        <li>
+                            <a href="{{url('admin/articlecategory')}}">
+                                <i class="glyphicon glyphicon-list"></i>   Categorias
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url('admin/article')}}">
+                                <i class="glyphicon glyphicon-bullhorn"></i> Articulos
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                    @endif
+                @endif
+            <!-- FIN Permiso para ver menu usuario-->
+
                 <!--<li>
                     <a href="#">
                         <i class="glyphicon glyphicon-camera"></i> Photo items
@@ -60,11 +112,16 @@
                         </li>
                     </ul>
                 </li> -->
+
+                @if(Auth::check())
+                    @if(Auth::user()->admin==1)
                 <li>
                     <a href="{{url('admin/user')}}">
                         <i class="glyphicon glyphicon-user"></i> Usuarios
                     </a>
                 </li>
+                    @endif
+                @endif
                 <li>
                     <a href="{{ url('auth/logout') }}"><i class="fa fa-sign-out"></i> Salir</a>
                 </li>

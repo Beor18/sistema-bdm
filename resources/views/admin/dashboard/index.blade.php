@@ -101,6 +101,8 @@
                 </a>
             </div>
         </div>-->
+        @if(Auth::check())
+                    @if(Auth::user()->admin==1)
         <div class="col-lg-3 col-md-3">
             <div class="panel panel-primary">
                 <div class="panel-heading">
@@ -123,6 +125,8 @@
                     </div>
                 </a>
             </div>
+                        @endif
+        @endif
         </div>
     </div>
 @endsection
