@@ -30,7 +30,7 @@
                     <span class="help-block">{{ $errors->first('password', ':message') }}</span>
                 </div>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
                     <div class="checkbox">
                         <label>
@@ -38,11 +38,11 @@
                         </label>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <div class="form-group">
-                <div class="col-md-12 col-md-offset-4">
-                    <button type="submit" class="btn btn-primary btn-lg" style="margin-right: 15px;">
+                <div class="col-md-12 col-md-12">
+                    <button type="submit" class="btn btn-lg btn-danger btn-block" style="margin-right: 15px;">
                         Ingresar
                     </button>
 

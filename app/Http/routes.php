@@ -90,7 +90,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'usuario'], function() {
     Route::get('user/{user}/delete', 'Admin\UserController@delete');
     Route::resource('user', 'Admin\UserController');
 
-
+    # Seccion Articulos
+    Route::get('article/{article}/delete', 'Admin\ArticleController@delete');
 
 
    

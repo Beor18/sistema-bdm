@@ -24122,3 +24122,25 @@ table.dataTable thead .sorting:after {
 .panel-yellow a:hover {
   color: #df8a13;
 }
+
+.panel-ventas { 
+  border: 1px solid #d9230f;
+ }
+.ventas {
+  color: #fff;
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, #FA0303 0%, #685757 100%);
+  background-image: -o-linear-gradient(top, #FA0303 0%, #685757 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FA0303), to(#685757));
+  background-image: linear-gradient(to bottom, #FA0303 0%, #685757 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);
+  background-repeat: repeat-x;
+}
+
+.panel-footer-ventas {
+  padding: 10px 15px;
+  background-color: #fcfcfc;
+  border-top: 1px solid #d9230f;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}

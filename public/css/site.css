@@ -12714,7 +12714,7 @@ body {
   font-size: 13px;
   line-height: 1.42857143;
   color: #777777;
-  background-color: #fcfcfc;
+  background: linear-gradient(to right, #2C3E50, #3db0ff);;
 }
 
 input,
