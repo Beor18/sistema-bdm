@@ -15,19 +15,28 @@
 	<div class="tab-content">
 		<div class="tab-pane active" id="tab-general">
 			<div class="form-group  {{ $errors->has('name') ? 'has-error' : '' }}">
-				{!! Form::label('name', "Name", array('class' => 'control-label')) !!}
+				{!! Form::label('name', "Nombre", array('class' => 'control-label')) !!}
 				<div class="controls">
 					{!! Form::text('name', null, array('class' => 'form-control')) !!}
 					<span class="help-block">{{ $errors->first('name', ':message') }}</span>
 				</div>
 			</div>
 			<div class="form-group  {{ $errors->has('lang_code') ? 'has-error' : '' }}">
-				{!! Form::label('lang_code', trans("admin/language.code"), array('class' => 'control-label')) !!}
+				{!! Form::label('lang_code', trans("Telefono"), array('class' => 'control-label')) !!}
 				<div class="controls">
 					{!! Form::text('lang_code', null, array('class' => 'form-control')) !!}
 					<span class="help-block">{{ $errors->first('lang_code', ':message') }}</span>
 				</div>
 			</div>
+
+			<div class="form-group  {{ $errors->has('lang_contacto') ? 'has-error' : '' }}">
+				{!! Form::label('lang_contacto', trans("Contacto"), array('class' => 'control-label')) !!}
+				<div class="controls">
+					{!! Form::text('lang_contacto', null, array('class' => 'form-control')) !!}
+					<span class="help-block">{{ $errors->first('lang_contacto', ':message') }}</span>
+				</div>
+			</div>
+
 		</div>
 	</div>
 	<div class="form-group">

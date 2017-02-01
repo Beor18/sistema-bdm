@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Article;
 use App\ArticleCategory;
+use App\Language;
 use App\User;
 use App\Photo;
 use App\PhotoAlbum;
@@ -21,9 +22,10 @@ class DashboardController extends AdminController {
 
         $news = Article::count();
         $newscategory = ArticleCategory::count();
+        $newsproveedor = Language::count();
         $users = User::count();
         $photo = Photo::count();
         $photoalbum = PhotoAlbum::count();
-		return view('admin.dashboard.index',  compact('title','news','newscategory','photo','photoalbum','users'));
+		return view('admin.dashboard.index',  compact('title','news','newscategory','photo','photoalbum','users' ,'newsproveedor'));
 	}
 }

@@ -13,12 +13,11 @@
 @section('main')
     <div class="page-header">
         <h3>
-            {!! trans("admin/language.languages") !!}
+            Proveedores
 
             <div class="pull-right">
                 <a href="{!!  url('admin/language/create') !!}"
-                   class="btn btn-sm  btn-primary iframe"><span
-                            class="glyphicon glyphicon-plus-sign"></span> {!!
+                   class="btn btn-sm  btn-primary iframe"><span class="glyphicon glyphicon-plus-sign"></span> {!!
 				trans("admin/modal.new") !!}</a>
             </div>
         </h3>
@@ -27,9 +26,9 @@
     <table id="table" class="table table-striped table-hover">
         <thead>
         <tr>
-            <th>{{ trans("admin/modal.title") }}</th>
-            <th>{{ trans("admin/language.code") }}</th>
-            <th>{{ trans("admin/language.icon") }}</th>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Contacto</th>
             <th>{{ trans("admin/admin.action") }}</th>
         </tr>
         </thead>

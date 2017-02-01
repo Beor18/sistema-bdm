@@ -13100,6 +13100,7 @@ a.bg-danger:focus {
   padding-bottom: 8px;
   margin: 36px 0 18px;
   border-bottom: 1px solid #dddddd;
+  padding: 1px;
 }
 
 ul,
@@ -18331,6 +18332,7 @@ button.list-group-item-danger.active:focus {
 
 .panel-default {
   border-color: #dddddd;
+  box-shadow: 6px 6px 5px #999;
 }
 
 .panel-default > .panel-heading {
@@ -18354,6 +18356,7 @@ button.list-group-item-danger.active:focus {
 
 .panel-primary {
   border-color: #d9230f;
+  box-shadow: 6px 6px 5px #999;
 }
 
 .panel-primary > .panel-heading {
@@ -18377,6 +18380,7 @@ button.list-group-item-danger.active:focus {
 
 .panel-success {
   border-color: #469408;
+  box-shadow: 6px 6px 5px #999;
 }
 
 .panel-success > .panel-heading {
@@ -18400,6 +18404,7 @@ button.list-group-item-danger.active:focus {
 
 .panel-info {
   border-color: #029acf;
+  box-shadow: 6px 6px 5px #999;
 }
 
 .panel-info > .panel-heading {
@@ -18423,6 +18428,7 @@ button.list-group-item-danger.active:focus {
 
 .panel-warning {
   border-color: #9b479f;
+  box-shadow: 6px 6px 5px #999;
 }
 
 .panel-warning > .panel-heading {
@@ -18446,6 +18452,7 @@ button.list-group-item-danger.active:focus {
 
 .panel-danger {
   border-color: #d9831f;
+  box-shadow: 6px 6px 5px #999;
 }
 
 .panel-danger > .panel-heading {
@@ -24125,6 +24132,7 @@ table.dataTable thead .sorting:after {
 
 .panel-ventas { 
   border: 1px solid #d9230f;
+  box-shadow: 6px 6px 5px #999;
  }
 .ventas {
   color: #fff;

@@ -112,11 +112,11 @@ class LanguageController extends AdminController {
 					'id' => $language->id,
 					'name' => $language->name,
 					'lang_code' => $language->lang_code,
-					'icon' => $language->lang_code,
+					'lang_contacto' => $language->lang_contacto,
 				];
 			});
         return Datatables::of($languages)
-            ->edit_column('icon', '<img src="blank.gif" class="flag flag-{{$icon}}" alt="" />')
+            
 
             ->add_column('actions', '<a href="{{{ url(\'admin/language/\' . $id . \'/edit\' ) }}}" class="btn btn-success btn-sm iframe" ><span class="glyphicon glyphicon-pencil"></span> {{ trans("admin/modal.edit") }}</a>
                     <a href="{{{ url(\'admin/language/\' . $id . \'/delete\' ) }}}" class="btn btn-sm btn-danger iframe"><span class="glyphicon glyphicon-trash"></span> {{ trans("admin/modal.delete") }}</a>

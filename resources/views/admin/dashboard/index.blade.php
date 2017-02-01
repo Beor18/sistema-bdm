@@ -5,7 +5,7 @@
 
 {{-- Content --}}
 @section('main')
-    <h3>
+    <h3 class="page-header" style="padding: 2%;"> 
         Escritorio
     </h3>
     <div class="row">
@@ -72,6 +72,30 @@
                     </div>
                 </div>
                 <a href="{{url('admin/article')}}">
+                    <div class="panel-footer">
+                        <span class="pull-left">{{ trans("admin/admin.view_detail") }}</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="glyphicon glyphicon-list fa-3x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">{{$newsproveedor}}</div>
+                            <div>Proveedores</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="{{url('admin/language')}}">
                     <div class="panel-footer">
                         <span class="pull-left">{{ trans("admin/admin.view_detail") }}</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
