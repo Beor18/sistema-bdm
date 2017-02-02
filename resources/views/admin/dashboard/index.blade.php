@@ -1,4 +1,5 @@
 @extends('admin.layouts.default')
+{!! Charts::assets() !!}
 
 {{-- Web site Title --}}
 @section('Escritorio') {!! $title !!} :: @parent @endsection
@@ -105,6 +106,16 @@
                 </a>
             </div>
         </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                            <h4 style="color: #fff;"><strong>Usuarios Mensuales</strong></h4>
+                </div>
+                {!! Charts::create('area', 'highcharts')->labels(['Diciembre 2016', 'Enero 2017', 'Febrero 2017'])->values([10, 20, 2])->render() !!}
+            </div>
+        </div>
+
         <!--<div class="col-lg-3 col-md-3">
             <div class="panel panel-primary">
                 <div class="panel-heading">
